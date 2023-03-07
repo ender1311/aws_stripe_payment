@@ -1,14 +1,14 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "backend for eCommerce store",
+  "main": "server.js",
   "scripts": {
     "devStart": "nodemon server.js",
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dan Luk",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
