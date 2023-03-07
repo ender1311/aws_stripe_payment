@@ -24,6 +24,7 @@ app.use(
           "http://localhost:5173",
           "http://ender1311.github.io",
           "https://ender1311.github.io",
+          "https://*.ender1311.github.io"
 
         ],
   })
