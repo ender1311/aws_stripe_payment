@@ -1,0 +1,4 @@
+.env
+node_modules
+working_no_api_ShoppingCart.tsx
+crashed_ShoppingCart.tsx
