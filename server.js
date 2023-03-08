@@ -7,12 +7,12 @@ const app = express()
 const cors = require("cors")
 app.use(express.json())
 
-// app.use((req, res, next) => {
-//   res.setHeader('Access-Control-Allow-Origin', '*');
-//   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE, OPTIONS');
-//   next();
-// });
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE, OPTIONS');
+  next();
+});
 
 //Cors allows certain addresses access to this server
 
@@ -81,8 +81,7 @@ https://stripe.com/docs/api/checkout/sessions/create?lang=node
 app.post("/checkout-session", async (req, res) => {
   try {
     const session = await stripe.checkout.sessions.create({
-      success_url: `${process.env.CLIENT_URL}/success.html`,
-      cancel_url: `${process.env.CLIENT_URL}/cancel.html`,
+      
       payment_method_types: ["card"],
       mode: "payment",
       line_items: req.body.items.map(item => {
@@ -98,7 +97,8 @@ app.post("/checkout-session", async (req, res) => {
           quantity: item.quantity,
         }
       }),
-      
+      success_url: `${process.env.CLIENT_URL}/success.html`,
+      cancel_url: `${process.env.CLIENT_URL}/cancel.html`,
     })
     res.json({ url: session.url })
   } catch (e) {
@@ -107,5 +107,5 @@ app.post("/checkout-session", async (req, res) => {
 })
 
 // aws ec2 instance is listening on port 8080
-const port = process.env.PORT || 443
+const port = process.env.PORT || 3000
 app.listen(port, () => console.log(`Listening on port ${port}`))
