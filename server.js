@@ -56,6 +56,12 @@ storeItemsData.forEach(item => {
 
 module.exports = storeItems;
 
+// test route
+app.get("/test", (req, res) => {
+  res.send("<h1>It's working 🤗</h1>")
+})
+
+
 /* 
 using stripe for payment
 go to stripe api documentation here
@@ -95,5 +101,6 @@ app.post("/checkout-session", async (req, res) => {
   }
 })
 
+// aws ec2 instance is listening on port 8080
 const port = process.env.PORT || 8080
 app.listen(port, () => console.log(`Listening on port ${port}`))
