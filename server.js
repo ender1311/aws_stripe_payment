@@ -7,12 +7,12 @@ const app = express()
 const cors = require("cors")
 app.use(express.json())
 
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE, OPTIONS');
-  next();
-});
+// app.use((req, res, next) => {
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PATCH, DELETE, OPTIONS');
+//   next();
+// });
 
 //Cors allows certain addresses access to this server
 
@@ -25,7 +25,9 @@ app.use(
           "http://ender1311.github.io",
           "http://*.ender1311.github.io",
           "https://ender1311.github.io",
-          "https://*.ender1311.github.io"
+          "https://*.ender1311.github.io",
+          "https://ender1311.github.io/minions_store/dist/",
+          "https://*ender1311.github.io/minions_store/dist/",
 
         ],
   })
