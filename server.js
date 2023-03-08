@@ -61,6 +61,9 @@ app.get("/test", (req, res) => {
   res.send("<h1>It's working 🤗</h1>")
 })
 
+app.post("/testpost", (req, res) => {
+  res.send("<h1>It's working 🤗</h1>")
+})
 
 /* 
 using stripe for payment
