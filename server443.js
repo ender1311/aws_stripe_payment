@@ -104,6 +104,6 @@ app.post("/checkout-session", async (req, res) => {
   }
 })
 
-// aws ec2 instance is listening on port 8080
-const port = process.env.PORT || 3000
+// aws ec2 instance is listening
+const port = process.env.PORT || 443
 app.listen(port, () => console.log(`Listening on port ${port}`))
