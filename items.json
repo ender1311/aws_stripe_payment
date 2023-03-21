@@ -133,6 +133,30 @@
       "name": "Steel Claw Hammer",
       "price": 49.50,
       "imgUrl": "./imgs/straight_claw_hammer.jpg"
+    },
+    {
+      "id": 1000,
+      "name": "Pet Basket Liner",
+      "price": 32.50,
+      "imgUrl": "./imgs/straight_claw_hammer.jpg"
+    },
+    {
+      "id": 1001,
+      "name": "Water Bottle Holder",
+      "price": 12.24,
+      "imgUrl": "./imgs/straight_claw_hammer.jpg"
+    },
+    {
+      "id": 1002,
+      "name": "Front Mounted Basket",
+      "price": 32.50,
+      "imgUrl": "./imgs/straight_claw_hammer.jpg"
+    },
+    {
+      "id": 1003,
+      "name": "Pannier Bag",
+      "price": 32.50,
+      "imgUrl": "./imgs/straight_claw_hammer.jpg"
     }
   
   ]
